@@ -2,7 +2,7 @@
   "name": "node_practice",
   "version": "1.0.0",
   "description": "Nope",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,5 +11,10 @@
     "url": "nope"
   },
   "author": "Kieran",
-  "license": "MIT"
+  "license": "MIT",
+  "readme": "readme.md",
+  "dependencies": {
+    "express": "^4.13.4",
+    "gulp": "^3.9.1"
+  }
 }
