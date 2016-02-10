@@ -1,14 +1,14 @@
 {
   "name": "node_practice",
   "version": "1.0.0",
-  "description": "Nope",
+  "description": "Messing around with express",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "nope"
+    "url": "https://github.com/kieraneglin/Node-Express"
   },
   "author": "Kieran",
   "license": "MIT",
