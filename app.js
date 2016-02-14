@@ -1,23 +1,14 @@
 var express = require('express');
 var app = express();
+var routes = require('./routes');
 
 app.set('view engine', 'jade');
 
-app.locals.pagetitle = "awesome stuff";
+app.locals.pagetitle = "This is globally availible to views";
 
-app.get('/', function(req, res){
-  res.render('default', {
-    title: 'Home',
-    classname: 'home',
-    users: ['Kieran', 'Eglin', 'Hello']
-  });
-});
-app.get('/about', function(req, res){
-  res.render('default', {
-    title: 'About',
-    classname: 'about'
-  });
-});
+app.get('/', routes.index);
+app.get('/about', routes.about);
+
 app.get('*', function(req, res){
   res.send('Bad route');
 });
