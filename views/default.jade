@@ -1,5 +1,15 @@
 doctype html
 html(lang="en")
   head
-    title= title
-  body
+    include partials/page/head.jade
+  body(class=classname)
+    include partials/page/header.jade
+    .container
+      h1= pagetitle
+      -if(typeof(users) !== 'undefined')
+        ul
+          -for(var i = 0; i < users.length; i++)
+            li= users[i]
+    include partials/page/footer.jade
+    include partials/page/jsdefaults.jade
+ 

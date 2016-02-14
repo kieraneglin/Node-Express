@@ -3,20 +3,20 @@ var app = express();
 
 app.set('view engine', 'jade');
 
+app.locals.pagetitle = "awesome stuff";
+
 app.get('/', function(req, res){
-  res.render('default', {title: 'Home'});
+  res.render('default', {
+    title: 'Home',
+    classname: 'home',
+    users: ['Kieran', 'Eglin', 'Hello']
+  });
 });
-app.get('/me', function(req, res){
-  res.send('Its me!');
-});
-app.get('/who/:name?', function(req, res){
-  var name = req.params.name;
-  res.send(name + ' wuz here');
-});
-app.get('/who/:name?/:title?', function(req, res){
-  var name = req.params.name;
-  var title = req.params.title;
-  res.send(name + ' wuz here' + title);
+app.get('/about', function(req, res){
+  res.render('default', {
+    title: 'About',
+    classname: 'about'
+  });
 });
 app.get('*', function(req, res){
   res.send('Bad route');
